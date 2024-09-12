@@ -73,9 +73,9 @@
         const onlyCleanLetters = new Set(content.toLowerCase().replace(/[^a-z]/g, ''));
 
         if(onlyCleanLetters.size === 26){
-            solutionArea.textContent = `Yes, ${content} is a Pangramm`;
+            solutionArea.textContent = `Yes, "${content}" is a Pangramm`;
         } else {
-            solutionArea.textContent = `No, ${content} isn't a Pangramm`;
+            solutionArea.textContent = `No, "${content}" isn't a Pangramm`;
         }
     }
 </script>

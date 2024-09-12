@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3c53977-5455-4a67-8469-555509e9a350" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="c3c53977-5455-4a67-8469-555509e9a350" name="Changes" comment="added functions and ui basic">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,12 +83,25 @@
       <updated>1725965675247</updated>
       <workItem from="1725965676278" duration="3535000" />
       <workItem from="1725984975205" duration="4000" />
-      <workItem from="1726135458022" duration="2609000" />
+      <workItem from="1726135458022" duration="3032000" />
     </task>
+    <task id="LOCAL-00001" summary="added functions and ui basic">
+      <option name="closed" value="true" />
+      <created>1726138122111</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726138122111</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added functions and ui basic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added functions and ui basic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
