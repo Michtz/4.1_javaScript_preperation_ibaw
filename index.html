@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preparation for JS</title>
+    <script>
+    </script>
+
+</head>
+<body>
+<section>
+    <label for="inputString1">Reverse the inputted String</label>
+    <input type="text" id="inputString1" placeholder="Enter a string" onkeyup="updateSiblingButtonState(this)">
+    <button disabled id="checkButton1" onclick="revertString()">Reverse</button>
+    <div id="resultOfReverse"></div>
+</section>
+
+<section>
+    <label for="inputString2">Function to detect a leap Year</label>
+    <input type="number" id="inputString2" placeholder="Enter a Year" onkeyup="updateSiblingButtonState(this)"/>
+    <button disabled id="checkButton2" onclick="isItALeapYear()">Check</button>
+    <div id="resultOfLeapYear"></div>
+</section>
+
+<section>
+    <label for="inputString3">Function to detect a leap Year</label>
+    <input type="text" id="inputString3" placeholder="Enter a sentence" onkeyup="updateSiblingButtonState(this)"/>
+    <button disabled id="checkButton3" onclick="isItAPangramm()">Check</button>
+    <div id="resultOfPangramm"></div>
+</section>
+</body>
+
+<script>
+    const isInputEmpty = (id) => {
+        return document.getElementById(id).value.trim() === '' ||
+            parseInt(document.getElementById(id).value) < 0;
+    }
+
+    const updateSiblingButtonState = (event) => {
+        const buttonElement = event.nextElementSibling;
+        document.getElementById(buttonElement.id).disabled = isInputEmpty(event.id);
+    }
+
+</script>
+<script>
+    const revertString = () => {
+        const content = document.getElementById('inputString1').value
+        const solutionArea = document.getElementById('resultOfReverse');
+        solutionArea.textContent = content.split('').reverse().join('');
+    }
+</script>
+
+<script>
+
+    const isItALeapYear = () => {
+        const year = parseInt(document.getElementById('inputString2').value);
+        const solutionArea = document.getElementById('resultOfLeapYear');
+
+        if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+            solutionArea.textContent = `Yes, ${year} is a leap Year`;
+        } else {
+            solutionArea.textContent = `No, ${year} isn't a leap Year`;
+        }
+    }
+
+
+</script>
+
+<script>
+    const isItAPangramm = () => {
+        const content = document.getElementById('inputString3').value;
+        const solutionArea = document.getElementById('resultOfPangramm');
+        const onlyCleanLetters = new Set(content.toLowerCase().replace(/[^a-z]/g, ''));
+
+        if(onlyCleanLetters.size === 26){
+            solutionArea.textContent = `Yes, ${content} is a Pangramm`;
+        } else {
+            solutionArea.textContent = `No, ${content} isn't a Pangramm`;
+        }
+    }
+</script>
+</html>
