@@ -26,37 +26,49 @@
 <body>
 <section class="revert-string-container">
     <label for="inputString1">Reverse the inputted String</label>
-    <input type="text" id="inputString1" placeholder="Enter a string" onkeyup="updateSiblingButtonState(this)">
+    <input type="text" id="inputString1" placeholder="Enter a string"/>
     <button disabled id="checkButton1" onclick="revertString()">Reverse</button>
     <div id="resultOfReverse"></div>
 </section>
 
 <section class="lap-year-container">
     <label for="inputString2">Function to detect a leap Year</label>
-    <input type="number" id="inputString2" placeholder="Enter a Year" onkeyup="updateSiblingButtonState(this)"/>
+    <input type="number" id="inputString2" placeholder="Enter a Year"/>
     <button disabled id="checkButton2" onclick="isItALeapYear()">Check</button>
     <div id="resultOfLeapYear"></div>
 </section>
 
 <section class="pangramm-container">
     <label for="inputString3">Function to detect a Pangramm</label>
-    <input type="text" id="inputString3" placeholder="Enter a sentence" onkeyup="updateSiblingButtonState(this)"/>
+    <input type="text" id="inputString3" placeholder="Enter a sentence"/>
     <button disabled id="checkButton3" onclick="isItAPangramm()">Check</button>
     <div id="resultOfPangramm"></div>
 </section>
 </body>
 
 <script>
-    const isInputEmpty = (id) => {
-        return document.getElementById(id).value.trim() === '' ||
-            parseInt(document.getElementById(id).value) < 0;
+    const isInputEmpty = (input) => {
+        return input.value.trim() === '' || (input.type === 'number' && parseInt(input.value) < 0);
     }
 
-    const updateSiblingButtonState = (event) => {
-        const buttonElement = event.nextElementSibling;
-        document.getElementById(buttonElement.id).disabled = isInputEmpty(event.id);
+    const updateButtonState = (input) => {
+        const button = input.nextElementSibling;
+        button.disabled = isInputEmpty(input);
     }
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const inputs = document.querySelectorAll('input');
+
+        inputs.forEach(input => {
+            input.addEventListener('input', () => updateButtonState(input));
+
+            input.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' && !isInputEmpty(input)) {
+                    input.nextElementSibling.click();
+                }
+            });
+        });
+    });
 
     const revertString = () => {
         const content = document.getElementById('inputString1').value

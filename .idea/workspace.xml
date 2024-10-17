@@ -85,7 +85,11 @@
       <workItem from="1725984975205" duration="4000" />
       <workItem from="1726135458022" duration="3369000" />
       <workItem from="1726158453686" duration="1024000" />
-      <workItem from="1727473143845" duration="1437000" />
+      <workItem from="1727473143845" duration="2239000" />
+      <workItem from="1727605764035" duration="7000" />
+      <workItem from="1728040372517" duration="4000" />
+      <workItem from="1728040506314" duration="1076000" />
+      <workItem from="1728122495263" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="added functions and ui basic">
       <option name="closed" value="true" />
@@ -103,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726139704937</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="styled and code refactored&#10;now with mvp ui">
+      <option name="closed" value="true" />
+      <created>1727474665081</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727474665081</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1727474777784</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727474777784</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +131,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added functions and ui basic" />
+    <MESSAGE value="styled and code refactored&#10;now with mvp ui" />
     <MESSAGE value="refactor" />
     <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
